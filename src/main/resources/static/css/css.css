@@ -1,0 +1,40 @@
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;  
+  height: 100vh;
+}
+
+h1 {
+  color: navy;
+  text-align: center;
+}
+
+h2 {
+  color: navy;
+  margin-left: 20px;
+  text-align: center;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 15px;
+  font-family: "Monaco", "Courier New", monospace;
+}
+
+aside {
+  width: 10%;
+  height:100%;
+  padding-right: 10px;
+  float: left;
+  font-style: italic;
+  background-color: lightgray;
+}
+
