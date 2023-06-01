@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Kitty Fan Page</title>
+  <style>
+    body {
+      background-color: lightblue;
+      margin: 0;
+    }
+
+    .header {
+      background-color: gold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .title {
+      color: black;
+      font-size: 36px;
+      font-family: "Comic Sans MS", cursive;
+      margin: 0;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .image {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title" onclick="window.location.href='index.html'">Hello Kitty</h1>
+  </div>
+  
+  <div class="image-container">
+    <img class="image" src="hellokitty.jpg" alt="Click to play MP3" onclick="playAudio('musica.mp3')">
+  </div>
+
+  <script>
+    function playAudio(src) {
+      const audio = new Audio(src);
+      audio.play();
+    }
+  </script>
+</body>
+</html>

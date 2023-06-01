@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: lightgoldenrodyellow;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="submit"]:hover {
+      background-color: blue;
+    }
+
+    .submit-icon {
+      display: flex;
+      align-items: stretch;
+      height: 50px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido a la secta</h1>
+
+  <form>
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
+    </div>
+
+    <div class="form-group">
+      <label for="time">Año y hora de nacimiento:</label>
+      <input type="text" id="time" name="time" required>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" value="Firmar pacto">
+      <img src="satan.jpeg" alt="Icon" class="submit-icon">
+    </div>
+  </form>
+</body>
+</html>

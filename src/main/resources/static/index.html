@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Kitty Fan Page</title>
+  <style>
+    .header {
+      background-color: pink;
+      padding: 20px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .header:hover {
+      background-color: black;
+    }
+
+    .title {
+      color: black;
+      font-family: "Comic Sans MS", cursive;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: red;
+      font-family: "Comic Sans MS", cursive;
+      margin: 0;
+      border-bottom: 2px solid black;
+      padding-bottom: 10px;
+      cursor: pointer;
+    }
+    
+    .subs {
+      color: orange;
+      font-family: "Comic Sans MS", cursive;
+      margin: 0;
+      border-bottom: 2px solid black;
+      padding-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .col {
+      width: 33.33%;
+      padding: 0 10px;
+    }
+
+    .header:hover .title,
+    .header:hover .subtitle {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">Hello Kitty Fan Page</h1>
+    <div class="row">
+      <div class="col">
+        <h2 class="subtitle" onclick="window.location.href='video.html'">Melody</h2>
+      </div>
+      <div class="col">
+        <h2 class="subtitle" onclick="window.location.href='kuromi.html'">Kuromi</h2>
+      </div>
+      <div class="col">
+        <h2 class="subtitle" onclick="window.location.href='audio.html'">Hello Kitty</h2>
+      </div>
+    </div>
+    
+  </div>
+</body>
+ <h1 class="subs" onclick="window.location.href='formulario.html'">Formulario</h1>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Kitty Fan Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .scroll-box {
+      width: 300px;
+      height: 200px;
+      overflow-y: scroll;
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-box">
+    <label>
+      <input type="radio" name="option" onclick="openVideo()" /> Play Video
+    </label>
+    <br />
+    <label>
+      <input type="radio" name="option" onclick="hellokitty.jpg" /> View Image
+    </label>
+  </div>
+
+  <script>
+    function openVideo() {
+      window.open('https://www.youtube.com/watch?v=VIDEO_ID');
+    }
+
+    function openImage() {
+      window.open('image.jpg');
+    }
+  </script>
+</body>
+</html>
