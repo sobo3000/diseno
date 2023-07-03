@@ -3,8 +3,8 @@
 <head th:fragment="head">
     <title>Zay Shop eCommerce HTML CSS Template</title>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../img/apple-icon.png" rel="apple-touch-icon">
     <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
@@ -16,10 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
           rel="stylesheet">
     <link href="../css/fontawesome.min.css" rel="stylesheet">
-    <!--
-    TemplateMo 559 Zay Shop
-    https://templatemo.com/tm-559-zay-shop
-    -->
 </head>
 <body>
 
@@ -52,6 +48,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin}">Admin</a>
                     </li>
                 </ul>
             </div>
@@ -384,8 +383,7 @@
             <div class="row pt-2">
                 <div class="col-12">
                     <p class="text-left text-light">
-                        Copyright &copy; 2021 Company Name
-                        | Designed by <a href="https://templatemo.com" rel="sponsored" target="_blank">TemplateMo</a>
+                        Copyright &copy; 2023 Melanie Benavides
                     </p>
                 </div>
             </div>
@@ -400,6 +398,8 @@
     <script src="../js/jquery-1.11.0.min.js"></script>
     <script src="../js/jquery-migrate-1.2.1.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
     <script src="../js/templatemo.js"></script>
     <script src="../js/custom.js"></script>
 </div>

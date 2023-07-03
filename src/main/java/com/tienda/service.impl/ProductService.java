@@ -5,27 +5,11 @@ import com.tienda.entities.Product;
 import com.tienda.service.IProductService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
-public class ProductService implements IProductService {
-
-    private final IProductRepository productRepository;
-
+public class ProductService extends BaseService<Product, Integer> implements IProductService {
     public ProductService(IProductRepository productRepository) {
-        this.productRepository = productRepository;
+        super(productRepository);
     }
 
-    public List<Product> getAllProducts() {
-        return (List<Product>) this.productRepository.findAll();
-    }
-
-    public void save(Product product) {
-        product.setActivo(true);
-        this.productRepository.save(product);
-    }
-
-    public void delete(Product product) {
-        this.productRepository.delete(product);
-    }
 }

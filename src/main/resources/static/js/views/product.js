@@ -4,18 +4,27 @@ $(document).on("click", ".open-modal", function () {
 
     if (currentProductId) {
         const currentProduct = products.find(x => x.id === currentProductId);
-        $("#id").val(currentProduct.id);
-        $("#id_categoria").val(currentProduct.id_categoria);
-        $("#descripcion").val(currentProduct.descripcion);
-        $("#detalle").val(currentProduct.detalle);
-        $("#precio").val(currentProduct.precio);
-        $("#existencias").val(currentProduct.existencias);
-        $("#ruta_imagen").val(currentProduct.ruta_imagen);
+        for (const [key, value] of Object.entries(currentProduct)) {
+            $(`#${key}`).val(value);
+        }
     }
 });
 
 $(document).on("click", "#saveProduct", function () {
-    $("#formProduct").submit();
+    for (let [key, value] of Object.entries(productDefault)) {
+        productDefault[key] = $(`#${key}`).val();
+    }
+
+    $.ajax({
+        url: 'api/product',
+        contentType: 'application/json',
+        dataType: 'json',
+        type: 'POST',
+        success: function (result) {
+            location.reload();
+        },
+        data: JSON.stringify(productDefault)
+    });
 })
 
 //Delete
@@ -23,14 +32,13 @@ $(document).on("click", ".btnDeleteProduct", function () {
     const currentProductId = Number($(this).attr('idproduct'));
     const currentProduct = products.find(x => x.id === currentProductId);
     $.ajax({
-        url: 'product/delete',
+        url: 'api/product',
         contentType: "application/json",
         dataType: 'json',
-        type: 'POST',
+        type: 'DELETE',
         success: function (result) {
             location.reload();
-        },
-        //here we are serialization the object
+        }, //here we are serialization the object
         data: JSON.stringify(currentProduct)
     });
 })
