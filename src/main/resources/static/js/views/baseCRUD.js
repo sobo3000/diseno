@@ -1,8 +1,10 @@
 const apiURL = `api/${serviceEntity}`;
 
 $(document).on("click", ".open-modal", function () {
+    //Get the id from the button
     const currentEntityId = Number($(this).attr(idNameToUse));
     if (currentEntityId) {
+        //Search the current entity by the id that we got from the button
         const currentEntity = listOfEntities.find(x => x.id === currentEntityId);
         for (const [key, value] of Object.entries(currentEntity)) {
             if (typeof currentEntity[key] === 'object') {

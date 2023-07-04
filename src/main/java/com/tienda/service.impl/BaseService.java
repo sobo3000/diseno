@@ -1,13 +1,12 @@
 package com.tienda.service.impl;
 
-import com.tienda.entities.Product;
 import com.tienda.service.IBaseService;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class BaseService<T, Y> {
+public class BaseService<T, Y> implements IBaseService<T, Y> {
     protected final CrudRepository<T, Y> repository;
 
     public BaseService(CrudRepository<T, Y> repository) {

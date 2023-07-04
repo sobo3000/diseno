@@ -22,6 +22,7 @@
                 </tr>
                 </thead>
                 <tbody>
+                <!-- this comes from the model that is in product controller-->
                 <tr th:each="product : ${products}">
                     <td><span th:text="${product.id}"></span></td>
                     <td><span th:text="${product.category.getDescripcion()}"></span></td>
@@ -66,6 +67,7 @@
                         <div class="form-group">
                             <label for="category-id">Categoria</label>
                             <select class="form-control" id="category-id">
+                                <!-- here thymeleaf is iterating over the categories to add options inside the dropdown-->
                                 <option th:each="category : ${categories}" th:text="${category.getDescripcion()}"
                                         th:value="${category.getId()}"></option>
                             </select>

@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "categoria")
 public class Category {
 
+    //This is important to keep the generic use in the js for subobjects, to keep the field "id" and just to map the column name
     @Id
     @Column(name = "id_categoria")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
