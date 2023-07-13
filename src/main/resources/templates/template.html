@@ -24,7 +24,7 @@
     <div class="container d-flex justify-content-between align-items-center">
 
         <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-            Tienda de mel
+            Tienda de Caleb
         </a>
 
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
@@ -52,6 +52,9 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/admin}">Admin</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{log.html}">Login</a>
+                    </li>
                 </ul>
             </div>
             <div class="navbar align-self-center d-flex">
@@ -75,6 +78,7 @@
                     <i class="fa fa-fw fa-user text-dark mr-3"></i>
                     <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                 </a>
+                
             </div>
         </div>
 
@@ -107,7 +111,6 @@
                                                                           href="https://templatemo.com"
                                                                           rel="sponsored" target="_blank">TemplateMo</a>
                                 website.
-                                Image credits go to <a class="text-success" href="https://stories.freepik.com/"
                                                        rel="sponsored" target="_blank">Freepik
                                 Stories</a>,
                                 <a class="text-success" href="https://unsplash.com/" rel="sponsored" target="_blank">Unsplash</a>
@@ -393,6 +396,9 @@
 </footer>
 <!-- End Footer -->
 
+<a class="nav-icon position-relative text-decoration-none" href="log.html">
+    <button class="btn btn-primary">Login</button>
+</a>
 <!-- Start Script -->
 <div th:fragment="scripts">
     <script src="../js/jquery-1.11.0.min.js"></script>
